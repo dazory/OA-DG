@@ -1,133 +1,140 @@
 theme: default # default || classic || dark
-organization: Pixel Genius Labs
-twitter: '@denkivvakame'
-title: Academic Project Page Template
-journal: "AAAA'24"
+organization: Urban Robotics Lab
+twitter: # '@denkivvakame'
+title: "Object-aware domain generalization for object detection"
+journal: "AAAI'24 (Oral)"
 resources:
-  paper: # https://openreview.net/
-  arxiv: https://arxiv.org
-  code: https://github.com/denkiwakame/academic-project-template
-  video: https://www.youtube.com/embed/onbnb_D1wC8?si=xJczUv716Lt5aO4l&amp;start=1150
-  demo: https://colab.research.google.com/
-  huggingface: https://huggingface.co/
-description: academic projectpage template that supports markdown and KaTeX
+  paper: https://openreview.net/forum?id=ysAhgeGADY
+  arxiv: https://arxiv.org/abs/2312.12133
+  code: https://github.com/WoojuLee24/OA-DG
+  video: https://www.youtube.com/watch?v=lFYBmdSMMGg
+  demo: https://www.youtube.com/watch?v=4cZx9errffM
+  # huggingface: https://huggingface.co/
+description: Object-aware domain generalization for object detection
 
 image: https://denkiwakame.github.io/academic-project-template/teaser.jpg
 url: https://denkiwakame.github.io/academic-project-template
 speakerdeck: # speakerdeck slide ID
 authors:
-  - name: Wakame Denki*
-    affiliation: [1, 2]
-    url: http://denkiwakame.github.io/
-    position: intern
-  - name: Jane Doe
+  - name: Wooju Lee*
     affiliation: [1]
-    position: Researcher
-    url: https://thispersondoesnotexist.com/
-  - name: John Smith
+    url: https://woojulee24.github.io/
+    position: # intern
+  - name: Dasol Hong*
     affiliation: [1]
-    position: Researcher
-    url: https://thispersondoesnotexist.com/
+    position: # Researcher
+    url: https://dazory.github.io/
+  - name: Hyungtae Lim†
+    affiliation: [1]
+    position: # Researcher
+    url: https://limhyungtae.github.io/hyungtae-lim/
+  - name: Hyun Myung†
+    affiliation: [1]
+    position: # Researcher
+    url: https://urobot.kaist.ac.kr/url_teams/prof-hyunmyung/
 affiliations:
-  - Pixel Genius Labs
-  - NeuroNauts Academy
+  - Urban Robotics Lab, Korea Advanced Institute of Science and Technology
 meta:
-  - '*work done while she was interning at Pixel Genius Lab.'
+  - "*These authors contributed equally;  †Corresponding authors"
 bibtex: >
-  @article{doe2024superai,
-    author    = {Jane Doe and John Smith},
-    title     = {Unleashing the Power of Super AI: Transforming the Future of Technology},
-    journal   = {Journal of Superintelligent Systems},
-    year      = {2024},
-    volume    = {99},
-    number    = {1},
-    pages     = {1-42},
-    month     = {January},
-    keywords  = {Super AI, Machine Learning, Artificial Intelligence, Technological Innovation},
-    doi       = {10.9999/jsis.2024.001},
-    url       = {https://www.example.com/superai-article},
-    note      = {This paper sets the benchmark for future AI research and applications.}
+  @inproceedings{lee2024object,
+  title={Object-Aware Domain Generalization for Object Detection},
+  author={Lee, Wooju and Hong, Dasol and Lim, Hyungtae and Myung, Hyun},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={4},
+  pages={2947--2955},
+  year={2024}
   }
 
-teaser: teaser.jpg
+teaser: oadg_introduction.gif
 abstract: |
-  This is a versatile template designed to satisfy your research project page needs, all while harnessing the power of 🎨**UIKit** and ⚛ **React**. Built on the foundations of simplicity and flexibility, this template allows you to focus on expressing your ideas without the hassle of directly handling CSS—thanks to customizable SASS variables.
-  With markdown as your canvas and $\KaTeX$ for precise equations, crafting clear and engaging project page becomes effortless. Whether you're unraveling complex theories or presenting your findings, this template aims to support your scholarly endeavors with grace and ease.
-  *Need to edit HTML directly?* Fear not! In addition to markdown, you can also directly write HTML with ease. Feel empowered to craft your content exactly as you envision it, whether through markdown's simplicity or the precision of HTML.
+  ***OA-DG*** is an effective method for *single-domain object detection generalization (S-DGOD)*. 
+  It consists of two components: *OA-Mix* for data augmentation and *OA-Loss* for reducing domain gaps.
 
 body:
-  - title: Media examples
+  - title: Features
     text: |
-      ### Mediafile Path
-      Files in `public/` can be referenced directly: `<img src="001.jpg" />`
+      - ***OA-DG*** consists of *OA-Mix* for data augmentation and *OA-Loss* for reducing the domain gap.
+      - ***OA-Mix*** is a *data augmentation* methods that increases image diversity while preserving important semantic feature with multi-level transformations and object-aware mixing.
+      - ***OA-Loss*** is a novel *contrastive loss* functions that reduces the domain gap by training semantic relations of foreground and background instances from multi-domain.
+      - Extensive experiments on standard benchmarks (*Cityscapes-C* and *Diverse Weather Dataset*) show that OA-DG outperforms SOTA methods on unseen target domains.
+      - OA-DG can be generally applied to *improve robustness* regardless of the augmentation set and object detector architectures.
 
-      ### UIKit Components
-      This template supports all UIKit components.
-      To check available components, refer to the [UIKit documentation](https://getuikit.com/docs).
-      [Slideshow](https://getuikit.com/docs/slideshow) example
+  - title: OA-Mix
+    text: |
+      ### Multi-Level Transformations
 
-      </div>
-      <div uk-slideshow="animation: push">
-        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-          <div class="uk-slideshow-items">
-            <div>
-              <img src="001.jpg" alt="" uk-cover>
-            </div>
-            <div>
-              <img src="002.jpg" alt="" uk-cover>
-            </div>
-            <div>
-              <img src="003.jpg" alt="" uk-cover>
-            </div>
-          </div>
-          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
-          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
-        </div>
-        <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
-      </div>
+      ***Multi-level transformation*** enhances the domain *diversity* of the augmented image *without damaging* the object locations.
 
-      [Grid system](https://getuikit.com/docs/grid) example
       <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-3@m" uk-grid>
         <div>
-          <img src="001.jpg">
-          <span class="uk-text-meta">Fig1 - caption example</figcaption>
+            <div>
+              <video src="fg.mp4" loop muted uk-video="autoplay:inview" />
+            </div>
+            <span class="uk-text-meta">Foreground-level transformation</figcaption>
         </div>
         <div>
-          <img src="002.jpg" />
-          <span class="uk-text-meta">Fig2 - caption example</figcaption>
+            <div>
+              <video src="bg.mp4" loop muted uk-video="autoplay:inview" />
+            </div>
+            <span class="uk-text-meta">Background-level transformation</figcaption>
         </div>
         <div>
-          <img src="003.jpg">
-          <span class="uk-text-meta">Fig3 - caption example</figcaption>
+            <div>
+              <video src="random.mp4" loop muted uk-video="autoplay:inview" />
+            </div>
+            <span class="uk-text-meta">Random-level transformation</figcaption>
         </div>
       </div>
 
-      [Video](https://getuikit.com/docs/video) and [Slider](https://getuikit.com/docs/slider) component example
-      <div uk-slider>
+      - An image is randomly divided into several regions such as *foreground*, *background*, and *random box regions*.
+      - *Different transformations*, such as color and spatial transformations, are randomly applied to each region.
+      - Spatial transformations are applied at the foreground level to *preserve the location of the object*. 
+
+      ### Object-Aware Mixing
+
+      In object detection, each object in an image has different characteristics, such as size, location, and color distribution. 
+      Depending on these object-specific characteristics, *some transformations can damage the semantic features of an object*.  
+      ***Object-aware mixing*** enhances the *affinity* of the augmented image, mitigating the negative effects of transformations.
+
+
+      <img-comparison-slider style="display: flex; margin: 0 auto; max-width:600px;">
+        <img slot="first" src="transformed.png" />
+        <img slot="second" src="object-aware-mixing.png" />
+      </img-comparison-slider>
+      <div style="margin: 0 auto; max-width:600px;">
+        <span class="uk-text-meta">(Left) Multi-level transformed image. (Right) Object-aware mixed image. </figcaption>
+      </div>
+
+      ### Examples
+      The left and right images are the original and OA-Mixed images, respectively:
+
+      <div class="uk-slider" uk-slider="draggable: false">
         <div class="uk-slider-items uk-grid-small uk-child-width-1-1 uk-child-width-1-2@m uk-grid">
           <div>
-            <video
-              src="https://yootheme.com/site/images/media/yootheme-pro.mp4"
-              loop
-              muted
-              uk-video="autoplay:inview"
-              />
+            <img-comparison-slider style="display: flex; margin: 0 auto; max-width:600px;">
+              <img slot="first" src="orig-1.png" />
+              <img slot="second" src="ours-1.png" />
+            </img-comparison-slider>
           </div>
           <div>
-            <video
-              src="https://yootheme.com/site/images/media/yootheme-pro.mp4"
-              loop
-              muted
-              uk-video="autoplay:inview"
-              />
+            <img-comparison-slider style="display: flex; margin: 0 auto; max-width:600px;">
+              <img slot="first" src="orig-2.png" />
+              <img slot="second" src="ours-2.png" />
+            </img-comparison-slider>
           </div>
           <div>
-            <video
-              src="https://yootheme.com/site/images/media/yootheme-pro.mp4"
-              loop
-              muted
-              uk-video="autoplay:inview"
-              />
+            <img-comparison-slider style="display: flex; margin: 0 auto; max-width:600px;">
+              <img slot="first" src="orig-3.png" />
+              <img slot="second" src="ours-3.png" />
+            </img-comparison-slider>
+          </div>
+          <div>
+            <img-comparison-slider style="display: flex; margin: 0 auto; max-width:600px;">
+              <img slot="first" src="orig-4.png" />
+              <img slot="second" src="ours-4.png" />
+            </img-comparison-slider>
           </div>
         </div>
         <div class="uk-flex uk-flex-center uk-margin-small">
@@ -136,186 +143,99 @@ body:
         </div>
       </div>
 
-      [Image-Comparison-Slider](https://img-comparison-slider.sneas.io) example
-      <img-comparison-slider>
-        <img slot="first" src="002.jpg" />
-        <img slot="second" src="004.jpg" />
-      </img-comparison-slider>
-
-  - title: Markdown examples
+  - title: Results
     text: |
-      Here's our demo text showcasing the power of markdown and KaTeX integration!
-      Markdown allows you to easily format text using simple syntax.
-      - **bold**
-      - *italic*
-      - `inline code`.
+      We evaluated the robustness of our method for common corruptions and various weather conditions in urban scenes. mPC is an evaluation metric of robustness against out-of-distribution (OOD).
 
-      You can also create headings of various levels:
-      # Heading Level 1
-      ## Heading Level 2
-      ### Heading Level 3
-      #### Heading Level 4
-      Markdown allows you to create tables like the following:
-      ### Fictitious AI Benchmark Results
-      | **Model Name** | **Accuracy (%)** ⬆️| **Inference Time (ms)** ⬇️|
-      |---------------------|--------------|---------------------|
-      | TransGPT-XT         | 96.3         | $\infty$                 |
-      | GigaBERT Prime      | 94.7         | 9.5                 |
-      | MegaLSTM-Pro        | 92.5         | 10.1                |
-      | UltraTransformer    | 97.1         | 7.8                 |
-      | **QuantumDNN-ALPHA**    | 95.8         | 8.5             |
-
-      Of course, you can also directly write tables in HTML if needed. For more details, refer to the [UIKit Table documentation](https://getuikit.com/docs/table).
-
-      <div class="uk-overflow-auto uk-width-1-1">
-        <table class="uk-table uk-table-small uk-text-small uk-table-divider">
-          <thead>
-            <tr>
-              <th>Model Name</th>
-              <th>Accuracy (%)</th>
-              <th>Inference Time (ms)</th>
-              <th>Memory Usage (MB)</th>
-              <th>Training Time (hours)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>TransGPT-XT<br/>GigaBERT Prime</td>
-              <td>96.3<br/>94.7</td>
-              <td>8.2<br/>9.5</td>
-              <td>1200<br/>1100</td>
-              <td>36<br/>48</td>
-            </tr>
-            <tr>
-              <td>MegaLSTM-Pro<br/>UltraTransformer</td>
-              <td>92.5<br/>97.1</td>
-              <td>10.1<br/>7.8</td>
-              <td>1050<br/>1300</td>
-              <td>56<br/>42</td>
-            </tr>
-            <tr class="uk-active">
-              <td>QuantumDNN-ALPHA</td>
-              <td>95.8</td>
-              <td>8.5</td>
-              <td>1250</td>
-              <td>50</td>
-            </tr>
-          </tbody>
-        </table>
+      ### Cityscapes-C
+      <div>
+        <img src="table1.png" alt="">
       </div>
-  - title: Codeblock examples
-    text: |
-      Code blocks are automatically highlighted by [highlight.js](https://highlightjs.org/examples). To change the theme, import a preferred `.css`.
 
-      ```javascript
-      // src/components/body.jsx
-      import { markedHighlight } from "marked-highlight";
-      import hljs from 'highlight.js';
-      //import 'highlight.js/styles/base16/gruvbox-dark-hard.css';
-      import 'highlight.js/styles/base16/github.css';
-
-      const renderer = new marked.Renderer();
-      renderer.code = (code, language) => {
-        return `<pre class="hljs"><code class="hljs language-${language}">${code}</code></pre>`
-      }
-      ```
-  - title: KaTeX examples
-    text: >
-      $\KaTeX$ enables you to write mathematical expressions beautifully within your text (e.g. $\alpha$, $\beta$, $\gamma$ ).
-      $$ax^2 + bx + c = 0$$
-      $$ \int \oint \sum \prod $$
-      $$ \begin{CD} A @>a>> B \\ @VbVV @AAcA \\ C @= D \end{CD} $$
-      [KaTeX supports a wide range of mathematical symbols and equations](https://katex.org/docs/support_table.html), ensuring your technical content is both clear and visually appealing.
-      With markdown for text formatting and KaTeX for mathematical expressions, our template empowers you to communicate complex ideas effectively. Whether you're writing a scientific paper or a technical blog post, harnessing these tools will elevate your content and engage your readers.
-
-  - title: Color Palette
-    text: |
-      To customize the theme, edit UIkit variables in [theme.scss](https://github.com/denkiwakame/academic-project-template/blob/project-page/src/scss/theme.scss). Material Design colors are available as variables (e.g. `$clr-blue-50` ). For the full set of colors, please visit [Material Design Color System](https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors).
-
-      <div class="uk-overflow-auto">
-      <table class="uk-table uk-table-small uk-text-small uk-table-divider">
-        <thead>
-          <tr>
-            <th>50</th>
-            <th>100</th>
-            <th>200</th>
-            <th>300</th>
-            <th>400</th>
-            <th>500</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td bgcolor="#FFEBEE">$clr-red-50</td>
-            <td bgcolor="#FFCCD2">$clr-red-100</td>
-            <td bgcolor="#EF9A9A">$clr-red-200</td>
-            <td bgcolor="#E57373">$clr-red-300</td>
-            <td bgcolor="#FF5350">$clr-red-400</td>
-            <td bgcolor="#F44336">$clr-red-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#FCE4EC">$clr-pink-50</td>
-            <td bgcolor="#F8BBD0">$clr-pink-100</td>
-            <td bgcolor="#F48FB1">$clr-pink-200</td>
-            <td bgcolor="#F06292">$clr-pink-300</td>
-            <td bgcolor="#EC407A">$clr-pink-400</td>
-            <td bgcolor="#E91E63">$clr-pink-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#E8EAF6">$clr-indigo-50</td>
-            <td bgcolor="#C5CAE9">$clr-indigo-100</td>
-            <td bgcolor="#9FA8DA">$clr-indigo-200</td>
-            <td bgcolor="#7986CB">$clr-indigo-300</td>
-            <td bgcolor="#5C6BC0">$clr-indigo-400</td>
-            <td bgcolor="#3F51B5">$clr-indigo-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#E0F7FA">$clr-cyan-50</td>
-            <td bgcolor="#B2EBF2">$clr-cyan-100</td>
-            <td bgcolor="#80DEEA">$clr-cyan-200</td>
-            <td bgcolor="#4DD0E1">$clr-cyan-300</td>
-            <td bgcolor="#26C6DA">$clr-cyan-400</td>
-            <td bgcolor="#00BCD4">$clr-cyan-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#E0F2F1">$clr-teal-50</td>
-            <td bgcolor="#B2DFDB">$clr-teal-100</td>
-            <td bgcolor="#80CBC4">$clr-teal-200</td>
-            <td bgcolor="#4DB6AC">$clr-teal-300</td>
-            <td bgcolor="#26A69A">$clr-teal-400</td>
-            <td bgcolor="#009688">$clr-teal-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#FFF8E1">$clr-amber-50</td>
-            <td bgcolor="#FFECB3">$clr-amber-100</td>
-            <td bgcolor="#FFE082">$clr-amber-200</td>
-            <td bgcolor="#FFD54F">$clr-amber-300</td>
-            <td bgcolor="#FFCA28">$clr-amber-400</td>
-            <td bgcolor="#FFC107">$clr-amber-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#F9FBE7">$clr-lime-50</td>
-            <td bgcolor="#F0F4C3">$clr-lime-100</td>
-            <td bgcolor="#E6EE9C">$clr-lime-200</td>
-            <td bgcolor="#DCE775">$clr-lime-300</td>
-            <td bgcolor="#D4E157">$clr-lime-400</td>
-            <td bgcolor="#CDDC39">$clr-lime-500</td>
-          </tr>
-          <tr>
-            <td bgcolor="#FAFAFA">$clr-grey-50</td>
-            <td bgcolor="#F5F5F5">$clr-grey-100</td>
-            <td bgcolor="#EEEEEE">$clr-grey-200</td>
-            <td bgcolor="#E0E0E0">$clr-grey-300</td>
-            <td bgcolor="#BDBDBD">$clr-grey-400</td>
-            <td bgcolor="#9E9E9E">$clr-grey-500</td>
-          </tr>
-        </tbody>
-      </table>
+      ### DWD
+      <div>
+        <img src="table2.png" alt="" style="display: flex; margin: 0 auto; max-width:400px;">
       </div>
-  - title: License
-    text: |
-      This template is provided under the [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) license.
-      You are free to use and modify the code in your project as long as you include a link to this [GitHub repository](https://github.com/denkiwakame/academic-project-template) in your footer.
+
+      <details onclose>
+      <summary>☀️ Daytime-Sunny</summary>
+          
+      | Class     | GTs   | Dets   | Recall | AP        |
+      | --------- | ----- | ------ | ------ | --------- |
+      | aeroplane | 1738  | 9711   | 0.799  | 0.561     |
+      | bicycle   | 1046  | 6165   | 0.716  | 0.491     |
+      | bird      | 95339 | 325982 | 0.880  | 0.763     |
+      | boat      | 537   | 3151   | 0.702  | 0.462     |
+      | bottle    | 12309 | 76318  | 0.764  | 0.557     |
+      | bus       | 787   | 3410   | 0.654  | 0.489     |
+      | car       | 5029  | 28229  | 0.835  | 0.582     |
+      | **mAP**   |       |        |        | **0.558** |
+
+      </details>
+
+      <details onclose>
+      <summary>🌃 Night-Sunny</summary>
+
+      | Class     | GTs    | Dets    | Recall | AP        |
+      | --------- | ------ | ------- | ------ | --------- |
+      | aeroplane | 2012   | 15307   | 0.688  | 0.395     |
+      | bicycle   | 1410   | 9151    | 0.616  | 0.371     |
+      | bird      | 241616 | 1409587 | 0.846  | 0.639     |
+      | boat      | 665    | 13191   | 0.498  | 0.178     |
+      | bottle    | 17566  | 185415  | 0.710  | 0.439     |
+      | bus       | 841    | 4907    | 0.447  | 0.271     |
+      | car       | 4853   | 41633   | 0.714  | 0.412     |
+      | **mAP**   |        |         |        | **0.386** |
+
+      </details>
+
+      <details onclose>
+      <summary>🌧️ Dusk-Rainy</summary>
+
+      | Class     | GTs   | Dets   | Recall | AP        |
+      | --------- | ----- | ------ | ------ | --------- |
+      | aeroplane | 820   | 3953   | 0.604  | 0.382     |
+      | bicycle   | 322   | 2469   | 0.481  | 0.285     |
+      | bird      | 34240 | 180293 | 0.835  | 0.681     |
+      | boat      | 110   | 1508   | 0.336  | 0.132     |
+      | bottle    | 5144  | 27022  | 0.525  | 0.325     |
+      | bus       | 169   | 1186   | 0.331  | 0.214     |
+      | car       | 2235  | 13158  | 0.703  | 0.449     |
+      | **mAP**   |       |        |        | **0.353** |
+
+      </details>
+
+      <details onclose>
+      <summary>🌙 Night-Rainy</summary>
+
+      | Class     | GTs   | Dets   | Recall | AP        |
+      | --------- | ----- | ------ | ------ | --------- |
+      | aeroplane | 248   | 1158   | 0.468  | 0.289     |
+      | bicycle   | 121   | 1088   | 0.223  | 0.123     |
+      | bird      | 21655 | 174857 | 0.668  | 0.356     |
+      | boat      | 49    | 1635   | 0.143  | 0.010     |
+      | bottle    | 1532  | 20963  | 0.378  | 0.139     |
+      | bus       | 71    | 560    | 0.169  | 0.120     |
+      | car       | 499   | 4383   | 0.463  | 0.220     |
+      | **mAP**   |       |        |        | **0.180** |
+
+      </details>
+
+      <details onclose>
+      <summary>🌫️ Daytime-Foggy</summary>
+
+      | Class     | GTs   | Dets  | Recall | AP        |
+      | --------- | ----- | ----- | ------ | --------- |
+      | aeroplane | 554   | 1882  | 0.493  | 0.324     |
+      | bicycle   | 4920  | 17470 | 0.500  | 0.324     |
+      | bird      | 33392 | 81460 | 0.714  | 0.626     |
+      | boat      | 911   | 4301  | 0.497  | 0.319     |
+      | bottle    | 21530 | 62759 | 0.527  | 0.420     |
+      | bus       | 2363  | 6609  | 0.530  | 0.426     |
+      | car       | 736   | 6068  | 0.497  | 0.267     |
+      | **mAP**   |       |       |        | **0.387** |
+
+      </details>
 
 projects: # relevant projects
   - title: Relevant Project I

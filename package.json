@@ -37,11 +37,11 @@
     "js-yaml": "^4.1.0",
     "lint-staged": "^15.4.3",
     "prettier": "^3.2.1",
-    "react-snap": "^1.23.0",
+    "react-snap": "^1.13.1",
     "sass": "^1.83.4",
     "sharp": "^0.33.2",
     "typos-rs-npm": "github:dalisoft/typos-rs-npm",
-    "vite": "^6.0.11"
+    "vite": "^6.3.6"
   },
   "dependencies": {
     "@iconify-json/logos": "^1.1.43",
