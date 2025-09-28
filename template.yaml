@@ -240,7 +240,7 @@ body:
 projects: # relevant projects
   - title: ActiveGrounder
     description: ActiveGrounder is a framework that transforms 3D visual grounding from a passive recognition task into an active exploration paradigm.
-    img: https://dazory.github.io/ActiveGrounder/public/active_grounder_thumbnail.png
+    img: https://github.com/dazory/ActiveGrounder/blob/main/public/active_grounder_thumbnail.png?raw=true
     journal: "Humanoids'25 Workshop"
     url: https://dazory.github.io/ActiveGrounder
   - title: CoCoA-Mix
