@@ -238,18 +238,13 @@ body:
       </details>
 
 projects: # relevant projects
-  - title: Relevant Project I
-    description: abstract text
-    img: https://getuikit.com/docs/images/light.jpg
-    journal: "ABCD'23"
-    url: https://denkiwakame.github.io/academic-project-template/
-  - title: Relevant Project II
-    description: abstract text
-    img: 001.jpg
-    journal: "EFGH'22"
-    url: https://denkiwakame.github.io/academic-project-template/
-  - title: Relevant Project III
-    description: abstract text
-    img: 002.jpg
-    journal: "IJKL'22"
-    url: https://denkiwakame.github.io/academic-project-template/
+  - title: ActiveGrounder
+    description: ActiveGrounder is a framework that transforms 3D visual grounding from a passive recognition task into an active exploration paradigm.
+    img: https://dazory.github.io/ActiveGrounder/public/active_grounder_thumbnail.png
+    journal: "Humanoids'25 Workshop"
+    url: https://dazory.github.io/ActiveGrounder
+  - title: CoCoA-Mix
+    description: CoCoA-Mix enhances specialization and generalization in prompt tuning using CoA-loss for refined decision boundaries and CoA-weights for confidence-based scaling.
+    img: https://dazory.github.io/CoCoA-Mix/static/images/tldr-1.png
+    journal: "ICML'25"
+    url: https://dazory.github.io/CoCoA-Mix
