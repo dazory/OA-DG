@@ -7,7 +7,7 @@ resources:
   paper: https://openreview.net/forum?id=ysAhgeGADY
   arxiv: https://arxiv.org/abs/2312.12133
   code: https://github.com/WoojuLee24/OA-DG
-  video: https://www.youtube.com/watch?v=lFYBmdSMMGg
+  video: https://youtu.be/lFYBmdSMMGg?feature=shared
   demo: https://www.youtube.com/watch?v=4cZx9errffM
   # huggingface: https://huggingface.co/
 description: Object-aware domain generalization for object detection
